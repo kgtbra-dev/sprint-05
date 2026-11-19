@@ -3,7 +3,7 @@ import express from "express";
 
 //[ Sprint 04 -- Herdado] recebimento de dados por POST
 //recebe JSON do navegador ou de um cliente HTTP
-import { lerMensagens, salvarMensagens } from "./store";
+import { lerMensagens, salvarMensagens } from "./store.js";
 
 const app = express();
 const PORT = 3000;
@@ -14,7 +14,7 @@ const PORT = 3000;
 import { text } from "express";
 
 // Recebe Json do navegador ou de um cliente HTTP
-app.use(XPathExpression.json());
+app.use(express.json());
 
 
 // Serializa gravações dentro deste único processo Node.js
